@@ -6,6 +6,7 @@ Internship Exemption Portal is a comprehensive platform designed to streamline t
 
 📚 Features
 🔑 Student Portal: Submit internship proofs with supporting documents, images, and videos.
+
 📄 Faculty Dashboard: Review and evaluate submissions with criteria-based tools.
 🌍 Approval Workflow: Transparent status updates and decision-making.
 👍 Rewards & Exemptions: Choose between rewards and course exemptions post-approval.
