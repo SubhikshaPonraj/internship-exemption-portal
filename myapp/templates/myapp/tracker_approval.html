@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="Utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Tracker Approval</title>
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="{% static 'css/tracker_approval.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="..//../static/images/bit logo.png" alt="Bannari Amman Institute of Technology">
+            </div>
+            <nav>
+                <ul>
+                    <br>
+                    <!-- <li><a href="{% url 'mark_evaluation' %}">Report Approval</a></li> -->
+                    <br>
+                    <li><button id="Btn">Internship Tracker Approval</button></li>
+                    <!-- <li><button  id="reportApprovalBtn">Internship Tracker Approval</button></li> -->
+                  
+                    <br>
+                    <li><button id="irt">Internship Report Approval</button></li>
+                    <br>
+                    <li><button id="reportApprovalBtn">Mark Evaluation</button></li>
+                    <!-- <br><br>
+                    <li><button onclick="gotoInternship()">Internship Tracker Approval</button></li>
+                    <br>
+                    <li><button onclick="gotoInternshipRep()">Internship Report Approval</button></li>
+                    <br>
+                    <li><button onclick="gotoInternshipRev()">Mark Evaluation</button></li> -->
+                </ul>
+            </nav>
+            <!-- <button class="logout" id="logout-btn" onclick="logout()">Log out</button> -->
+            <button id="logout-btn">Log out</button>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <h2>Students</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Student</th>
+                            <th>Industry</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Duration in Days</th>
+                            <th>Aim & Objective</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Subhiksha A P</td>
+                            <td>TCS</td>
+                            <td>25-07-2024</td>
+                            <td>25-08-2024</td>
+                            <td>30</td>
+                            <td><button class="view">View</button></td>
+                            <td>
+                                <button class="approve">Approve</button>
+                                <button class="reject">Reject</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Subhiksha A P</td>
+                            <td>Wipro</td>
+                            <td>14-05-2024</td>
+                            <td>14-06-2024</td>
+                            <td>30</td>
+                            <td><button class="view">View</button></td>
+                            <td>
+                                <button class="approve">Approve</button>
+                                <button class="reject">Reject</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Link JavaScript file -->
+    <script>
+        document.getElementById('reportApprovalBtn').onclick = function() {
+            window.location.href = "{% url 'mark_evaluation' %}";
+        };
+
+        document.getElementById('irt').onclick = function() {
+            window.location.href = "{% url 'report_approval' %}";
+        };
+        document.getElementById('Btn').onclick = function() {
+            window.location.href = "{% url 'tracker_approval' %}";
+        };
+        document.getElementById('logout-btn').onclick = function() {
+            window.location.href = "{% url 'tracker_approval' %}";
+        };
+    </script>
+    <script src="{% static 'js/tracker_approval.js' %}"></script>
+</body>
+</html>

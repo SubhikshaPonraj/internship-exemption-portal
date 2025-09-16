@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Evaluation Criteria</title>
+    <link rel="stylesheet" href="{% static 'css/mark_evaluation.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="..//../static/images/bit logo.png" alt="Bannari Amman Institute of Technology">
+            </div>
+            <nav>
+                <ul>
+                    <br>
+                    <!-- <li><a href="{% url 'mark_evaluation' %}">Report Approval</a></li> -->
+                    <br>
+                    <li><button id="Btn">Internship Tracker Approval</button></li>
+                    <!-- <li><button  id="reportApprovalBtn">Internship Tracker Approval</button></li> -->
+                  
+                    <br>
+                    <li><button id="irt">Internship Report Approval</button></li>
+                    <br>
+                    <li><button id="reportApprovalBtn">Mark Evaluation</button></li>
+                    <!-- <br>
+                    <br>
+                    <li><button onclick="gotoInternship()">Internship Tracker Approval</button></li>
+                    <br>
+                    <li><button onclick="gotoInternshipRep()">Internship Report Approval</button></li>
+                    <br>
+                    <li><button onclick="gotoInternshipRev()">Mark Evaluation</button></li>
+                    <br> -->
+                </ul>
+            </nav>
+            <button class="logout" onclick="logout()">Log out</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h2>Mark Evaluation Criteria</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Criteria</th>
+                        <th>Allotted Mark</th>
+                        <th>Secured Mark</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Understanding of Core Concepts</td>
+                        <td>20</td>
+                        <td><input type="number" id="mark1" min="0" max="20"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Application of Skills</td>
+                        <td>20</td>
+                        <td><input type="number" id="mark2" min="0" max="20"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Adaptability and Learning</td>
+                        <td>20</td>
+                        <td><input type="number" id="mark3" min="0" max="20"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Communication and Collaboration</td>
+                        <td>20</td>
+                        <td><input type="number" id="mark4" min="0" max="20"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Project Contributions and Initiative</td>
+                        <td>20</td>
+                        <td><input type="number" id="mark5" min="0" max="20"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total</td>
+                        <td>100</td>
+                        <td><span id="totalMark">0</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="calculate-btn" onclick="calculateTotal()">Calculate Total</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('reportApprovalBtn').onclick = function() {
+            window.location.href = "{% url 'mark_evaluation' %}";
+        };
+
+        document.getElementById('irt').onclick = function() {
+            window.location.href = "{% url 'report_approval' %}";
+        };
+        document.getElementById('Btn').onclick = function() {
+            window.location.href = "{% url 'tracker_approval' %}";
+        };
+    </script>
+    <script src="{% static 'js/mark_evaluation.js' %}"></script>
+</body>
+</html>

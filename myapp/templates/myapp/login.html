@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Exception Portal</title>
+    <!-- Use Django's static template tag to reference CSS file -->
+    <link rel="stylesheet" href="../../static/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Welcome Back!</h2>
+            <!-- Use Django's static template tag to reference image file -->
+            <img src="../../static/images/bit logo.png" alt="Bannari Amman Institute of Technology Logo" class="logo">
+        
+            <h4>INTERNSHIP COURSE EXCEPTION PORTAL</h4>
+            <!-- Change form action to Django template tag if you have a login URL defined -->
+            <form action="{% url 'login' %}" method="POST" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button class="login-btn" onclick="navigate(event)">Log In</button>
+            </form>
+            <p class="alternative-text">Sign in with your BIT account</p>
+        </div>
+    </div>
+    <script>
+        function navigate(event){
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            // Use Django's URL template tag for navigation
+            if(username === "faculty"){
+                window.location.href = "{% url 'tracker_approval' %}";
+            } else if(username == "student"){
+                window.location.href = "{% url 'internship_tracker' %}";
+            }
+        }
+    </script>
+</body>
+</html>

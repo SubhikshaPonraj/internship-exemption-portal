@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Report</title>
+  <link rel="stylesheet" href="{% static 'css/internship_report.css' %}">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+          <img src="..//../static/images/bit logo.png" alt="Bannari Amman Institute of Technology">
+      </div>
+      <nav>
+          <ul>
+          <!-- <li><button onclick="gotoInternship()">Internship</button></li> -->
+          <!-- <li><button onclick="gotoInternship()">Internship Tracker</button></li>
+          <br>
+          <li><button onclick="gotoInternshipRep()">Internship Report</button></li>
+          <br>
+          <li><button onclick="gotoInternshipRev()">Review Booking</button></li>
+          <br>
+          <li><button onclick="gotoInternshipStatus()">Review Status</button></li>   -->
+          <li><button id="Btn">Internship Tracker</button></li>
+                <!-- <li><button  id="reportApprovalBtn">Internship Tracker Approval</button></li> -->
+              
+                <br>
+                <li><button id="irt">Internship Report</button></li>
+                <br>
+                <li><button id="reportApprovalBtn">Review Booking</button></li>
+            <br>
+            <li><button id="statusBtn">Status Page</button></li>
+          </ul>
+      </nav>
+    </div>
+    <button class="logout" onclick="logout()">Log out</button>
+    <main>
+      <div class="form-header">
+        <h1>Create Internship Report</h1>
+      </div>
+      <form action="#">
+        <div class="form-group">
+          <label for="student">Student *</label>
+          <select id="student" required>
+            <option value="">Click to choose</option>
+            <!-- Options -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="year">Year of Study *</label>
+          <select id="year" required>
+            <option value="">Choose an option</option>
+            <!-- Options -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ssig">SSIG Number *</label>
+          <select id="ssig" required>
+            <option value="">Click to choose</option>
+            <!-- Options -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="special-lab">Special Lab *</label>
+          <select id="special-lab" required>
+            <option value="">Click to choose</option>
+            <!-- Options -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="sector">Sector *</label>
+          <select id="sector" required>
+            <option value="">Choose an option</option>
+            <!-- Options -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="industry-address-1">Industry Address Line 1 *</label>
+          <input type="text" id="industry-address-1" required>
+        </div>
+        <div class="form-group">
+          <label for="industry-address-2">Industry Address Line 2</label>
+          <input type="text" id="industry-address-2">
+        </div>
+        <div class="form-group">
+          <label for="city">City *</label>
+          <input type="text" id="city" required>
+        </div>
+        <div class="form-group">
+          <label for="original-certificate">Original Certificate Proof *</label>
+          <input type="file" id="original-certificate" required>
+        </div>
+        <div class="form-group">
+          <label for="attested-certificate">Attested Certificate *</label>
+          <input type="file" id="attested-certificate" required>
+        </div>
+        <div class="form-group">
+          <label for="iqac-verification">IQAC Verification *</label>
+          <select id="iqac-verification" required>
+            <option value="initiated">Initiated</option>
+          </select>
+        </div>
+        <div class="form-actions buttons">
+          <button type="submit">Create Internship Report</button>
+          <button type="button" class="btn">Create & Add Another</button>
+        </div>
+      </form>
+    </main>
+  </div>
+  <script>
+    document.getElementById('reportApprovalBtn').onclick = function() {
+        window.location.href = "{% url 'review' %}";
+    };
+
+    document.getElementById('irt').onclick = function() {
+        window.location.href = "{% url 'internship_report' %}";
+    };
+    document.getElementById('Btn').onclick = function() {
+        window.location.href = "{% url 'internship_tracker' %}";
+    };
+    document.getElementById('statusBtn').onclick = function() {
+        window.location.href = "{% url 'status' %}";
+    };
+</script>
+  <script src="{% static 'js/internship_report.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Review Portal</title>
+    <link rel="stylesheet" href="{% static 'css/review.css' %}">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="..//../static/images/bit logo.png" alt="Bannari Amman Institute of Technology">
+        </div>
+        <nav>
+            <ul>
+                <br>
+                <li><button id="Btn">Internship Tracker</button></li>
+                <!-- <li><button  id="reportApprovalBtn">Internship Tracker Approval</button></li> -->
+              
+                <br>
+                <li><button id="irt">Internship Report</button></li>
+                <br>
+                <li><button id="reportApprovalBtn">Review Booking</button></li>
+            <br>
+            <li><button id="statusBtn">Status Page</button></li>
+                <!-- <br>
+                <li><button onclick="gotoInternship()">Internship Tracker</button></li>
+                <br>
+                <li><button onclick="gotoInternshipRep()">Internship Report</button></li>
+                <br>
+                <li><button onclick="gotoInternshipRev()">Review Booking</button></li>
+                <br>
+                <li><button onclick="gotoInternshipStatus()">Review Status</button></li>-->
+            </ul>
+        </nav>
+    </div>
+    <button class="logout" onclick="logout()">Log out</button>
+
+    <div class="main-content">
+        <div class="assessment-banner">
+            Assessment Not Booked still now
+        </div>
+
+        <div class="content-wrapper">
+            <div class="description-section">
+                <h2>Internship Review</h2>
+                <p>This section provides a comprehensive review of your internship experience. Please ensure you have uploaded all required documents and completed all evaluation forms. Your internship review will cover key performance areas, feedback from supervisors, and self-reflections. Use this review to identify strengths and areas for improvement.</p>
+            </div>
+            <div class="internship-image">
+                <div class="picture">
+                    <img src="../../static/images/internship_logo.png" alt="Internship Review">
+                    <h2 class="text">Internship Review</h2>
+                </div>
+                <div class="action-btn">
+                    <button id="book-slot-btn">Book a Slot</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for booking -->
+    <div id="slot-modal" class="modal">
+        <div class="modal-content">
+            <h3>Book a Slot</h3>
+            <select>
+                <option value="">Select any Slot</option>
+                <option value="12-9-2024 10:00AM to 11:00AM">12-9-2024 10:00AM to 11:00AM</option>
+                <option value="12-9-2024 11:15AM to 12:15PM">12-9-2024 11:15AM to 12:15PM</option>
+                <option value="12-9-2024 02:00PM to 03:00PM">12-9-2024 02:00PM to 03:00PM</option>
+            </select>
+            <button id="book-now-btn">Book Now</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('reportApprovalBtn').onclick = function() {
+            window.location.href = "{% url 'review' %}";
+        };
+
+        document.getElementById('irt').onclick = function() {
+            window.location.href = "{% url 'internship_report' %}";
+        };
+        document.getElementById('Btn').onclick = function() {
+            window.location.href = "{% url 'internship_tracker' %}";
+        };
+        document.getElementById('statusBtn').onclick = function() {
+            window.location.href = "{% url 'status' %}";
+        };
+    </script>
+    <script src="{% static 'js/review.js' %}"></script>
+</body>
+</html>

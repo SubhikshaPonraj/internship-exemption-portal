@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Course Exception Portal</title>
+    <link rel="stylesheet" href="{% static 'css/status.css' %}">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="..//../static/images/bit logo.png" alt="Bannari Amman Institute of Technology">
+        </div>
+        <nav>
+            <ul>
+                <br>
+                    <!-- <li><a href="{% url 'mark_evaluation' %}">Report Approval</a></li> -->
+                    
+                    <li><button id="Btn">Internship Tracker</button></li>
+                    <!-- <li><button  id="reportApprovalBtn">Internship Tracker Approval</button></li> -->
+                  
+                    <br>
+                    <li><button id="irt">Internship Report</button></li>
+                    <br>
+                    <li><button id="reportApprovalBtn">Review Booking</button></li>
+                <br>
+            <li><button id="statusBtn">Status Page</button></li>
+                <!-- <br>
+                <li><button onclick="gotoInternship()">Internship Tracker</button></li>
+                <br>
+                <li><button onclick="gotoInternshipRep()">Internship Report</button></li>
+                <br>
+                <li><button onclick="gotoInternshipRev()">Review Booking</button></li>
+                <br>
+                <li><button onclick="gotoInternshipStatus()">Review Status</button></li>-->
+            </ul>
+        </nav>
+        <button class="logout" onclick="logout()">Log out</button>
+    </div>
+    
+    <div class="content">
+        <header>
+            <input type="text" placeholder="Press / to search">
+        </header>
+
+        <div class="events-table">
+            <h2>Events</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.NO</th>
+                        <th>NAME</th>
+                        <th>ROI NUM</th>
+                        <th>REVIEW DATE</th>
+                        <th>COMPANY NAME</th>
+                        <th>MARKS SECURED</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>SUBHIKSHA A P</td>
+                        <td>7376221CS321</td>
+                        <td>22-03-2024</td>
+                        <td>TCS</td>
+                        <td>86/100</td>
+                        <td class="status green">ELIGIBLE FOR COURSE EXEMPTION</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>SUBHIKSHA A P</td>
+                        <td>7376221CS321</td>
+                        <td>25-01-2024</td>
+                        <td>AMAZON</td>
+                        <td>78/100</td>
+                        <td class="status green">ELIGIBLE FOR COURSE EXEMPTION</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>SUBHIKSHA A P</td>
+                        <td>7376221CS321</td>
+                        <td>14-09-2023</td>
+                        <td>INFOSYS</td>
+                        <td>95/100</td>
+                        <td class="status green">ELIGIBLE FOR COURSE EXEMPTION</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>SUBHIKSHA A P</td>
+                        <td>7376221CS321</td>
+                        <td>16-07-2023</td>
+                        <td>GOOGLE</td>
+                        <td>45/100</td>
+                        <td class="status red">CAN APPLY FOR REWARD POINTS</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>SUBHIKSHA A P</td>
+                        <td>7376221CS321</td>
+                        <td>09-05-2023</td>
+                        <td>AVASOFT</td>
+                        <td>35/100</td>
+                        <td class="status red">CAN APPLY FOR REWARD POINTS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- <script>
+        function logout() {
+            // Use JavaScript to navigate to the login URL
+            window.location.href = "{% url 'login' %}";
+        }
+    </script> -->
+    <script>
+        document.getElementById('reportApprovalBtn').onclick = function() {
+            window.location.href = "{% url 'review' %}";
+        };
+
+        document.getElementById('irt').onclick = function() {
+            window.location.href = "{% url 'internship_report' %}";
+        };
+        document.getElementById('Btn').onclick = function() {
+            window.location.href = "{% url 'internship_tracker' %}";
+        };
+        document.getElementById('statusBtn').onclick = function() {
+            window.location.href = "{% url 'status' %}";
+        };
+    </script>
+    <script src="{% static 'js/status.js' %}"></script>
+</body>
+</html>
