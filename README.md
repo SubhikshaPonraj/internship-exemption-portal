@@ -2,31 +2,35 @@
 # Internship Exemption Portal 🎓💼
 
 ## Overview
-Welcome to the *Internship Exemption Portal*! This platform is built to assist students in submitting their internship proofs for course exemption and enables faculty members to evaluate and approve these requests efficiently.
+Internship Exemption Portal is a comprehensive platform designed to streamline the submission and evaluation of internship-related documents. It allows students to submit proofs, and faculty to review and evaluate them efficiently, ensuring a transparent and organized workflow.
 
-## Features ✨
-- *Student Portal*: Submit internship proofs with supporting documents, images, and videos.
-- *Faculty Dashboard*: Review and evaluate submissions with criteria-based tools.
-- *Approval Workflow*: Transparent status updates and decision-making.
-- *Rewards & Exemptions*: Choose between rewards and course exemptions post-approval.
+📚 Features
+🔑 Student Portal: Submit internship proofs with supporting documents, images, and videos.
+📄 Faculty Dashboard: Review and evaluate submissions with criteria-based tools.
+🌍 Approval Workflow: Transparent status updates and decision-making.
+👍 Rewards & Exemptions: Choose between rewards and course exemptions post-approval.
 
-## Tech Stack 🛠
-- *Frontend*: HTML, CSS, JavaScript
-- *Backend*: Python Stack (Django)
-- *Database*: MySQL
-- *API*: RESTful API
+💻 Tech Stack
 
-## Progress 🗂
-- *Stage 1*: Planning and Requirement Gathering ✔
-- *Stage 2*: Design and Prototyping 🔄
-- *Stage 3*: Database Designing ⏳
-- *Stage 4*: Backend Implementation ⏳
-- *Stage 5*: Frontend Implementation ⏳
-- *Stage 6*: Testing & Implementation ⏳
-- *Stage 7*: Deployment ⏳
+Frontend: HTML, CSS, JavaScript
 
-## SRS Document 📄
+Backend: Python Stack (Django)
+
+Database: MySQL
+
+API: RESTful API
+
+📄 SRS Document
 You can view the full Software Requirements Specification (SRS) document [here](https://github.com/SubhikshaPonraj/Internship_course_portal/blob/main/16-7376221CS321-PROJECT_FLOW.pdf).
-=======
-# internship-exemption-portal
->>>>>>> 246bd57ae47646fdd60bd629ba7a9528a39ea237
+
+🌐 Working Model
+
+[https://internship-exemption-portal.onrender.com/](https://internship-exemption-portal.onrender.com/)
+
+
+🔑 Login Credentials
+
+Role	Username
+Student	student
+
+Faculty	faculty
