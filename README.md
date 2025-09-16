@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Internship Exemption Portal 🎓💼
 
 ## Overview
@@ -26,3 +27,6 @@ Welcome to the *Internship Exemption Portal*! This platform is built to assist s
 
 ## SRS Document 📄
 You can view the full Software Requirements Specification (SRS) document [here](https://github.com/SubhikshaPonraj/Internship_course_portal/blob/main/16-7376221CS321-PROJECT_FLOW.pdf).
+=======
+# internship-exemption-portal
+>>>>>>> 246bd57ae47646fdd60bd629ba7a9528a39ea237
